@@ -25,7 +25,7 @@ def init_character(name):
 	db.session.add(character)
 	db.session.commit()
 
-	init_stat(name, 'Strength')
+	init_stat(name, 'Power')
 	init_stat(name, 'Agility')
 	init_stat(name, 'Constitution')
 	init_stat(name, 'Acuity')
