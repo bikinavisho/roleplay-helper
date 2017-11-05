@@ -9,36 +9,18 @@
 
 	<div class="shell">
 		<h1>Towers of Divinity</h1>
-		<div>Name: {{ name }}, Level: {{ level }}</div>
-		<div>
-			<h2>Stats</h2>
-			<table class="pure-table pure-table-striped">
-				<thead>
-				<tr>
-					<th>Stat</th>
-					<th>Value</th>
-					<th>Current XP</th>
-					<th>XP To Level</th>
-					<th>+1 XP</th>
-				</tr>
-				</thead>
+		<form action="/" method="post" class="pure-form pure-form-aligned">
+			<fieldset>
+				<div class="pure-control-group">
+					<label for="name">Character Name:</label>
+					<input name="name" type="text" placeholder="Jane">
+				</div>
+			</fieldset>
+			<div class="pure-controls">
+				<button type="submit" class="pure-button pure-button-primary">Submit</button>
+			</div>
 
-				<tbody>
-				{% for stat in stats %}
-					<tr>
-						<td>{{ stat.name }}</td>
-						<td>{{ stat.value }}</td>
-						<td>{{ stat.xp }}</td>
-						<td>{{ stat.xp_left }}</td>
-						<td>
-							<button>+</button>
-						</td>
-					</tr>
-				{% endfor %}
-
-				</tbody>
-			</table>
-		</div>
+		</form>
 	</div>
 
 {% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Homepage {% endblock %}
+{% block head %}
+	<link rel="stylesheet" href="/static/styles/stat-table.css">
+{% endblock %}
+
+{% block content %}
+
+	<div class="shell">
+		<h1>Towers of Divinity</h1>
+		<div>Name: {{ name }}, Level: {{ level }}</div>
+		<div>
+			<h2>Stats</h2>
+			<table class="pure-table pure-table-striped stat-table">
+				<thead>
+				<tr>
+					<th>Stat</th>
+					<th>Value</th>
+					<th>Current XP</th>
+					<th>XP To Level</th>
+					<th>+1 XP</th>
+				</tr>
+				</thead>
+
+				<tbody>
+				{% for stat in stats %}
+					<tr>
+						<td>{{ stat.name }}</td>
+						<td>{{ stat.value }}</td>
+						<td>{{ stat.xp }}</td>
+						<td>{{ stat.xp_left }}</td>
+						<td>
+							<button>+</button>
+						</td>
+					</tr>
+				{% endfor %}
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+{% endblock %}

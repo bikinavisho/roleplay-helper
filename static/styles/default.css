@@ -17,13 +17,12 @@
 }
 
 .shell {
-	background-color: navy;
+	background-color: whitesmoke;
 }
 
 html {
 	font-family: Ubuntu, sans-serif;
-	background-color: black;
-	color: floralwhite;
+	background-color: floralwhite;
 	padding: 3em;
 }
 
