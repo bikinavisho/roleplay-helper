@@ -1,1 +1,1 @@
-web: python init.py socketserver --debug --reload
+web: python roleplay-helper.py socketserver --debug --reload
